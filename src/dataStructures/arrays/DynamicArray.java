@@ -1,9 +1,11 @@
+//@Author: Goitseone Themba 21000539
 package dataStructures.arrays;
 
 public class DynamicArray {
-    private int[] arr;
+
     private int length;
     private int capacity;
+    private int[] arr;
 
     public DynamicArray(int capacity) {
         this.capacity = capacity;
@@ -23,7 +25,6 @@ public class DynamicArray {
         if(this.length == this.capacity) {
             this.resize();
         }
-
         this.arr[this.length] = n;
         this.length += 1;
     }
@@ -33,15 +34,15 @@ public class DynamicArray {
         return this.arr[this.length];
     }
 
-    private void resize() {
+    public void resize() {
         this.capacity = 2 * this.capacity;
-        int[] newArr = new int[this.capacity];
+        int[] new_arr = new int[this.capacity];
 
-        for(int i = 0; i < length; i++) {
-            newArr[i] = this.arr[i];
+        for(int i = 0; i < this.length; i++) {
+            new_arr[i] = this.arr[i];
         }
 
-        this.arr = newArr;
+        this.arr = new_arr;
     }
 
     public int getSize() {
