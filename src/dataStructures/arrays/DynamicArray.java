@@ -1,6 +1,7 @@
 //@Author: Goitseone Themba 21000539
 package dataStructures.arrays;
 
+///@Author: Goitseone Themba
 public class DynamicArray {
 
     private int length;
